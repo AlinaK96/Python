@@ -3,3 +3,14 @@
 Пример:
 
 - [1.1, 1.2, 3.1, 5, 10.01] => 0.19'''
+
+list = [1.1, 1.2, 3.1, 5, 10.01]
+
+for i in range (0, len(list), 1):
+    list[i] = round((list[i] - int(list[i])), 2)
+print(list)
+
+max = max(list)
+min = min(list)
+
+print(f' Разность между максимальным элиментом {max} и минимальным {min} равна: {max - min}')
