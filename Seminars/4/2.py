@@ -20,8 +20,7 @@ Sample Output 3:
 a = list(map(int, input('Введите натуральные числа списка: ').split()))
 print(f'Первоначальный список {a}')
 
-for i in (len(a)):
-    a[i] = a[i+1]
-    a[i+1] = a
-    i+=2
-print(a)
+for i in range (len(a) // 2):
+    a[i*2], a[i * 2 +1] = a[i * 2 +1], a[i*2]
+
+print(f'Новый список: {a}')
