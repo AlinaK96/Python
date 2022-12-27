@@ -15,9 +15,13 @@ Sample Output:
  ('+7', ['+71234567890', '+71234567854', '+71232267890'])'''
 
 
-a = list(map(int, input('Введите номера телефонов: ').split()))
-print(f'Первоначальный список {a}')
-
-codelist = []
-for i in range(len(a)):
-    number = a[i]
+str = input().split(" ")
+d = {}
+for x in str:
+    key = x[0:2]
+if key not in d.keys():
+    d[key] = [x]
+else:
+    d[key] += [x]
+    
+print(*sorted(d.items()))
